@@ -15,7 +15,7 @@
 [![Download GeoNetMon .deb](https://img.shields.io/badge/Download-Latest_.deb-A6E3A1?style=for-the-badge&logo=linux&logoColor=1E1E2E)](https://github.com/jegly/GeoNetMon/releases/latest)
 
 ```bash
-sudo dpkg -i geonetmon_1.0.3_all.deb
+sudo dpkg -i geonetmon_1.0.4_all.deb
 ```
 
 ### Checksums
@@ -23,13 +23,15 @@ sudo dpkg -i geonetmon_1.0.3_all.deb
 <!-- release-checksums:start -->
 | File | SHA-256 |
 |---|---|
-| `geonetmon_1.0.3_all.deb` | *sha256:4c972b7c097daea24b7ccd32c0e47ab5353446c9c043c7b064e5ce249183eb3e* |
+| `geonetmon_1.0.4_all.deb` | *sha256:03b237f99d1b1d059761de2b17a439d8ef51df296fe12454ed828259ae09f69c* |
 
 Verify a download:
 
 ```bash
-sha256sum geonetmon_1.0.3_all.deb
+sha256sum geonetmon_1.0.4_all.deb
 ```
+
+The [build attestation](https://github.com/jegly/GeoNetMon/attestations) shows it was built by this repository's release workflow (with the GitHub CLI: `gh attestation verify geonetmon_1.0.4_all.deb --repo jegly/GeoNetMon`).
 <!-- release-checksums:end -->
 
 The package installs dependencies, creates the `geonetmon` system group, adds your user to it, and starts the background daemon. Log out and back in after install, then launch from your application menu or run `geonetmon`.
@@ -400,7 +402,7 @@ Config is stored at `~/.config/geonetmon/config.json`.
 git clone https://github.com/jegly/GeoNetMon
 cd GeoNetMon
 bash packaging/build-deb.sh
-sudo dpkg -i geonetmon_1.0.3_all.deb
+sudo dpkg -i geonetmon_1.0.4_all.deb
 ```
 
 Requires `dpkg-deb` and Python 3.10+ on the build machine. No compiled components — the package is pure Python.
