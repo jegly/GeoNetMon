@@ -18,6 +18,20 @@
 sudo dpkg -i geonetmon_1.0.3_all.deb
 ```
 
+### Checksums
+
+<!-- release-checksums:start -->
+| File | SHA-256 |
+|---|---|
+| `geonetmon_1.0.3_all.deb` | *sha256:4c972b7c097daea24b7ccd32c0e47ab5353446c9c043c7b064e5ce249183eb3e* |
+
+Verify a download:
+
+```bash
+sha256sum geonetmon_1.0.3_all.deb
+```
+<!-- release-checksums:end -->
+
 The package installs dependencies, creates the `geonetmon` system group, adds your user to it, and starts the background daemon. Log out and back in after install, then launch from your application menu or run `geonetmon`.
 
 **New in 1.0.3:** passive DNS capture (real hostnames for CDN IPs with the shield *off*), optional app-lock password with idle auto-lock, 14 new themes ported from Tesseract, a native system-tray menu that works on GTK4, grouped past connections, and a stack of smaller fixes (toggle-button theming, Escape closes dialogs, window size persistence, owner-only permissions on config/history files).
