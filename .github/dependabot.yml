@@ -1,19 +1,9 @@
 
 version: 2
 updates:
-  # Python dependencies (activates once requirements.txt or pyproject.toml exists)
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 10
-    commit-message:
-      prefix: "deps"
-    groups:
-      python-minor-patch:
-        update-types: ["minor", "patch"]
-
-  # GitHub Actions (activates once .github/workflows exists)
+  # The only thing to update: the GitHub Actions the workflows use. The app's
+  # runtime dependencies are Ubuntu packages (Depends: in the .deb), which
+  # Dependabot cannot track.
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
